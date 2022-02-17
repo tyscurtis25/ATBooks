@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Calc = 20 / 5;
+    ViewData["Title"] = "Home";
+}
+
+@model IQueryable<Books>
+
+<h1>Welcome to the A&T Bookstore</h1>
+
+@foreach (Books b in Model)
+{
+
+    <h3>@b.Title</h3>
+
+    <ul>
+        <li>Author: @b.Author</li>
+        <li>Publisher: @b.Publisher</li>
+        <li>Isbn: @b.Isbn</li>
+        <li>Classification: @b.Classification</li>
+        <li>Category: @b.Category</li>
+        <li>PageCount: @b.PageCount</li>
+        <li>Price: $@b.Price</li>
+    </ul>
+
+    <br />
+}
+
+<a asp-action="Index" asp-route-pageNum="1">1</a>
+<a asp-action="Index" asp-route-pageNum="2">2</a>
+<a asp-action="Index" asp-route-pageNum="3">3</a>
+<a asp-action="Index" asp-route-pageNum="4">4</a>
