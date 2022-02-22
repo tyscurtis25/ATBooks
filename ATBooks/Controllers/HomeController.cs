@@ -21,27 +21,22 @@ namespace ATBooks.Controllers
         {
             int pageSize = 5;
 
-            //var x = new BooksViewModel
-            //{
-            //    Books = repo.Books
-            //    .OrderBy(b => b.Title)
-            //    .Skip((pageNum - 1) * pageSize)
-            //    .Take(pageSize),
-
-            //    PageInfo = new PageInfo
-            //    {
-            //        TotalNumBooks = repo.Books.Count(),
-            //        BooksPerPage = pageSize,
-            //        CurrentPage = pageNum
-            //    }
-            //};
-
-            var book = repo.Books
+            var x = new BooksViewModel
+            {
+                Books = repo.Books
                 .OrderBy(b => b.Title)
                 .Skip((pageNum - 1) * pageSize)
-                .Take(pageSize);
+                .Take(pageSize),
 
-            return View(book);
+                PageInfo = new PageInfo
+                {
+                    TotalNumBooks = repo.Books.Count(),
+                    BooksPerPage = pageSize,
+                    CurrentPage = pageNum
+                }
+            };
+
+            return View(x);
         }
     }
 }

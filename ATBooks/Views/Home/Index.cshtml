@@ -1,13 +1,12 @@
 ﻿@{
-    ViewBag.Calc = 20 / 5;
     ViewData["Title"] = "Home";
 }
 
-@model IQueryable<Books>
+@model BooksViewModel
 
 <h1>Welcome to the A&T Bookstore</h1>
 
-@foreach (Books b in Model)
+@foreach (Books b in Model.Books)
 {
 
     <h3>@b.Title</h3>
@@ -25,7 +24,4 @@
     <br />
 }
 
-<a asp-action="Index" asp-route-pageNum="1">1</a>
-<a asp-action="Index" asp-route-pageNum="2">2</a>
-<a asp-action="Index" asp-route-pageNum="3">3</a>
-<a asp-action="Index" asp-route-pageNum="4">4</a>
+<div pages="@Model.PageInfo" page-action="Index"></div>
