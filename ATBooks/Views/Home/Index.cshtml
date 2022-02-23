@@ -4,24 +4,26 @@
 
 @model BooksViewModel
 
-<h1>Welcome to the A&T Bookstore</h1>
+<h1 class="card-header">Welcome to A&T's Bookstore</h1><br />
 
 @foreach (Books b in Model.Books)
 {
+    <div class="card">
+        <h3 class="card-header">@b.Title</h3>
 
-    <h3>@b.Title</h3>
-
-    <ul>
-        <li>Author: @b.Author</li>
-        <li>Publisher: @b.Publisher</li>
-        <li>Isbn: @b.Isbn</li>
-        <li>Classification: @b.Classification</li>
-        <li>Category: @b.Category</li>
-        <li>PageCount: @b.PageCount</li>
-        <li>Price: $@b.Price</li>
-    </ul>
+        <ul class="card-body p-5">
+            <li>Author: @b.Author</li>
+            <li>Publisher: @b.Publisher</li>
+            <li>Isbn: @b.Isbn</li>
+            <li>Classification: @b.Classification</li>
+            <li>Category: @b.Category</li>
+            <li>PageCount: @b.PageCount</li>
+            <li>Price: $@b.Price</li>
+        </ul>
+    </div>
 
     <br />
 }
 
-<div page-list="@Model.PageInfo" page-action="Index"></div>
+
+<div page-list="@Model.PageInfo" page-action="Index" class="navbar col-3"></div>
