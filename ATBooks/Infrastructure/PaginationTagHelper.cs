@@ -14,7 +14,7 @@ namespace ATBooks.Infrastructure
     public class PaginationTagHelper : TagHelper
     {
         //Dynamically create the page links
-        private Microsoft.AspNetCore.Mvc.Routing.IUrlHelperFactory uhf;
+        private IUrlHelperFactory uhf;
 
         public PaginationTagHelper(IUrlHelperFactory temp)
         {
@@ -26,7 +26,7 @@ namespace ATBooks.Infrastructure
         public ViewContext vc { get; set; }
 
         //Different than ViewContext
-        public PageInfo Pages { get; set; }
+        public PageInfo PageList { get; set; }
         public string PageAction { get; set; }
 
         public override void Process (TagHelperContext thc, TagHelperOutput tho)
@@ -35,7 +35,7 @@ namespace ATBooks.Infrastructure
 
             TagBuilder final = new TagBuilder("div");
 
-            for (int i = 1; i < Pages.TotalPages; i++)
+            for (int i = 1; i < PageList.TotalPages; i++)
             {
                 TagBuilder tb = new TagBuilder("a");
 
