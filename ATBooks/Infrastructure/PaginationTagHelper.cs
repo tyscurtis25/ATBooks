@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ATBooks.Infrastructure
 {
-    [HtmlTargetElement("div", Attributes = "pages")]
+    [HtmlTargetElement("div", Attributes = "page-list")]
     public class PaginationTagHelper : TagHelper
     {
         //Dynamically create the page links
