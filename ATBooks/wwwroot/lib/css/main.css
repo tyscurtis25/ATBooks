@@ -1,3 +1,46 @@
-﻿h1, h2, h3, h4, h5, h6 {
-    color: cornflowerblue;
+﻿:root {
+    --one: #2E446E;
+    --two: #ADC4F0;
+    --three: #6495ED;
+    --four: #4F5A6E;
+    --five: #4E74BA;
+    --six: #FFFFFF;
+}
+
+/* Fonts:
+font-family: 'Playfair Display', serif; --Headings 
+font-family: 'Source Sans Pro', sans-serif; --Body 
+*/
+
+body {
+    color: var(--four);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--three);
+    font-family: 'Playfair Display', serif;
+}
+
+li {
+    list-style: none;
+}
+
+footer {
+    color: var(--three);
+}
+
+.border-bottom {
+    border-color: var(--three);
+}
+
+.card-header {
+    background-color: var(--three);
+    color: var(--six);
+}
+
+.card {
+    border-color: var(--three);
+    border-width: 0.5px;
 }
