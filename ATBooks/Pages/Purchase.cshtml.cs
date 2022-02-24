@@ -19,12 +19,14 @@ namespace ATBooks.Pages
         }
 
         public ShoppingCart shoppingCart { get; set; }
+        public string ReturnUrl { get; set; }
 
-        public void OnGet()
+        public void OnGet(string returnUrl)
         {
+            ReturnUrl = returnUrl ?? "/";
             shoppingCart = HttpContext.Session.GetJson<ShoppingCart>("shoppingCart") ?? new ShoppingCart();
         }
-        public IActionResult OnPost(int bookId)
+        public IActionResult OnPost(int bookId, string returnUrl)
         {
             Books b = repo.Books.FirstOrDefault(x => x.BookId == bookId);
 
@@ -33,7 +35,7 @@ namespace ATBooks.Pages
 
             HttpContext.Session.SetJson("shoppingCart", shoppingCart);
 
-            return RedirectToPage();
+            return RedirectToPage(new { ReturnUrl = returnUrl });
         }
     }
 }
