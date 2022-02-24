@@ -4,26 +4,14 @@
 
 @model BooksViewModel
 
-<br /><h1 class="text-center border-bottom">Welcome to A&T's Bookstore</h1><br />
-
 @foreach (Books b in Model.Books)
 {
-    <div class="card">
-        <h3 class="card-header">@b.Title</h3>
-
-        <ul class="card-body ps-4">
-            <li><strong>Author: </strong>@b.Author</li>
-            <li><strong>Publisher: </strong>@b.Publisher</li>
-            <li><strong>Isbn: </strong>@b.Isbn</li>
-            <li><strong>Classification: </strong>@b.Classification</li>
-            <li><strong>Category: </strong>@b.Category</li>
-            <li><strong>PageCount: </strong>@b.PageCount</li>
-            <li><strong>Price: </strong>$@b.Price</li>
-        </ul>
-    </div>
-
-    <br />
+    <partial name="BookstoreSummary" model="b"/>
 }
 
-
-<div page-list="@Model.PageInfo" page-action="Index" class="navbar col-3"></div>
+<div class="custom-nav">
+    <div page-list="@Model.PageInfo" page-action="Index" page-class="nav-link"
+         page-class-normal="nav-link" page-class-selected="nav-link fw-bolder text-decoration-underline" page-classes-enabled="true"
+         class="navbar col-4">
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="~/lib/css/main.css" />
+</head>
+<body class="container col-8">
+
+    <div class="">
+        <br /><h1 class="text-center border-bottom">Welcome to A&T's Bookstore</h1><br />
+    </div>
+
+    <div class="row m-1 p-1">
+
+        <div class="">
+            @RenderBody()
+        </div>
+
+    </div>
+
+    <footer class="modal-footer">Aubree and Tyler &copy ATBooks</footer>
+    <br /><br />
+</body>
+</html>

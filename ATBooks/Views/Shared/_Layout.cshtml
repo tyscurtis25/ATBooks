@@ -17,10 +17,24 @@
           rel="stylesheet">
 
 </head>
-<body class="container col-7">
-    <div>
-        @RenderBody()
+<body class="container col-8">
+    
+    <div class="">
+        <br /><h1 class="text-center border-bottom">Welcome to A&T's Bookstore</h1><br />
     </div>
+
+    <div class="row m-1 p-1">
+
+        <div id="categories" class="col-3">
+            <vc:categories></vc:categories>
+        </div>
+
+        <div class="col-9">
+            @RenderBody()
+        </div>
+
+    </div>
+
     <footer class="modal-footer">Aubree and Tyler &copy ATBooks</footer>
     <br /><br />
 </body>
