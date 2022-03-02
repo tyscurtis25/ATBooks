@@ -8,7 +8,7 @@ namespace ATBooks.Models
     public class ShoppingCart
     {
         public List<ShoppingCartLineItem> Items { get; set; } = new List<ShoppingCartLineItem>();
-        public void AddItem (Books bk, int qty)
+        public virtual void AddItem (Books bk, int qty)
         {
             ShoppingCartLineItem line = Items
                 .Where(b => b.Book.BookId == bk.BookId)
@@ -25,6 +25,16 @@ namespace ATBooks.Models
             {
                 line.Quantity += qty;
             }
+        }
+
+        public virtual void RemoveItem (Books bk)
+        {
+            Items.RemoveAll(x => x.Book.BookId == bk.BookId);
+        }
+
+        public virtual void ClearShoppingCart()
+        {
+            Items.Clear();
         }
 
         public double CalculateTotal()
