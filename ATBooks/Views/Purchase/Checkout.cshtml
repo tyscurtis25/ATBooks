@@ -1,0 +1,34 @@
+﻿@{
+}
+
+@model Purchase
+
+<h2>Done shopping?</h2>
+<p>Please enter your details before checkout.</p>
+
+<form method="post" asp-controller="Purchase" asp-action="Checkout">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    
+    <h4>Contact information:</h4>
+
+    <div class="form-group">
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">Email:</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone">Phone:</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+
+    <br />
+    <div class="float-end">
+        <input class="btn btn-outline-primary" type="submit" value="Checkout" />
+    </div>
+
+
+</form>
