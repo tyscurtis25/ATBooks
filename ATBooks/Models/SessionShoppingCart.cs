@@ -15,7 +15,8 @@ namespace ATBooks.Models
         {
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
 
-            SessionShoppingCart shoppingCart = session?.GetJson<SessionShoppingCart>("ShoppingCart") ?? new SessionShoppingCart();
+            SessionShoppingCart shoppingCart = session?.GetJson<SessionShoppingCart>("ShoppingCart") ?? 
+                new SessionShoppingCart();
 
             shoppingCart.Session = session;
 
@@ -28,7 +29,7 @@ namespace ATBooks.Models
         public override void AddItem(Books bk, int qty)
         {
             base.AddItem(bk, qty);
-            Session.SetJson("ShopingCart", this);
+            Session.SetJson("ShoppingCart", this);
         }
 
         public override void RemoveItem(Books bk)

@@ -93,3 +93,8 @@ footer {
     background-color: var(--two) !important;
     color: var(--six) !important;
 }
+
+.btn-outline-danger:hover {
+    background-color: var(--four) !important;
+    color: var(--six) !important;
+}

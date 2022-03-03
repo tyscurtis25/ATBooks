@@ -44,7 +44,6 @@ namespace ATBooks.Models
             return sum;
         }
     }
-
     
     public class ShoppingCartLineItem
     {
