@@ -83,6 +83,17 @@ footer {
     color: var(--six) !important;
 }
 
+.btn-outline-primary-cart, .btn-outline-primary-cart:visited {
+    border-color: var(--three) !important;
+    color: var(--six) !important;
+}
+
+.btn-outline-primary-cart:hover, .btn-outline-primary-cart:active {
+    background-color: var(--three) !important;
+    color: var(--six) !important;
+    border-color: var(--five) !important;
+}
+
 .btn-outline-success, .btn-outline-success:hover,
 .btn-outline-success:active, .btn-outline-success:visited, .btn-sm {
     border-color: var(--three) !important;
@@ -97,4 +108,13 @@ footer {
 .btn-outline-danger:hover {
     background-color: var(--four) !important;
     color: var(--six) !important;
+}
+
+.cart-bar {
+    color: var(--six);
+    background-color: var(--five);
+}
+
+.cart {
+    background-color: var(--six);
 }
