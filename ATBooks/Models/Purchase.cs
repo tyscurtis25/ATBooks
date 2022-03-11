@@ -25,7 +25,7 @@ namespace ATBooks.Models
         [Required(ErrorMessage = "Please enter a phone number: ")]
         public string Phone { get; set; }
 
-
-
+        [BindNever]
+        public bool OrderShipped { get; set; }
     }
 }

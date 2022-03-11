@@ -72,6 +72,10 @@ footer {
     background-color: var(--three) !important;
 }
 
+.bg-primary {
+    color: var(--three);
+    background-color: var(--three);
+}
 
 .btn-outline-primary, .btn-outline-primary:visited {
     border-color: var(--three) !important;
@@ -105,6 +109,13 @@ footer {
     color: var(--six) !important;
 }
 
+.btn-outline-danger, .btn-outline-danger:hover,
+.btn-outline-danger:active, .btn-outline-danger:visited {
+    border-color: var(--four) !important;
+    color: var(--three) !important;
+    background-color: var(--six) !important;
+}
+
 .btn-outline-danger:hover {
     background-color: var(--four) !important;
     color: var(--six) !important;
@@ -117,4 +128,27 @@ footer {
 
 .cart {
     background-color: var(--six);
+}
+
+.bg-admin {
+    background-color: var(--five);
+}
+
+.bg-admin2 {
+    background-color: var(--three);
+}
+
+.btn-admin2 {
+    border-color: var(--three) !important;
+    color: var(--three) !important;
+}
+
+.btn-admin2:hover {
+    background-color: var(--three) !important;
+    color: var(--six) !important;
+    border-color: var(--five) !important;
+}
+
+th, td {
+    color: var(--four);
 }
