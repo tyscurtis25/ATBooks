@@ -50,6 +50,14 @@ footer {
     border-width: 0.5px;
 }
 
+.card-body {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.5px;
+    box-shadow: 1px, 1px, 2px;
+    background-color: var(--six);
+}
+
 .custom-page-header {
     background-color: var(--three);
 }
@@ -151,4 +159,8 @@ footer {
 
 th, td {
     color: var(--four);
+}
+
+.login-bg {
+    background-color: #f2f2f2;
 }
