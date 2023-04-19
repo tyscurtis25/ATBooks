@@ -18,38 +18,45 @@
     <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 
 </head>
-<body class="container col-8">
+<body class="">
 
-    <div class="">
-        <br /><h1 class="text-center border-bottom mb-0">Welcome to A&T's Bookstore</h1>
-    </div>
-
-    <div class="cart-bar p-2 mt-0">
+    <div class="cart-bar p-2 mt-0 main-nav">
         <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <a class="btn btn-sm btn-outline-primary-cart" href="/admin">Log in</a>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-outline-primary-cart float-end" href="/admin">Log in</a>
                 </div>
-                <div class="col-4"></div>
-                <div class="col-4 text-right">
+                <div class="col-6">
+                    <h2 class="text-center text-white mb-0">A&T's Bookstore</h2>
+                </div>
+                <div class="col-3 text-right">
                     <vc:cart-summary />
                 </div>
             </div>
         </div>
     </div>
-    <div class="row m-1 p-1">
-
-        <div id="categories" class="col-3">
-            <vc:categories></vc:categories>
-        </div>
-
+    <div class="m-1 p-1 pt-3 container justify-content-end">
+        <br /><br /><br />
         <div class="col-9">
-            @RenderBody()
+            <div class="row">
+
+                <div class="col-3">
+
+                </div>
+
+                <div id="categories" class="col-2">
+                    <vc:categories></vc:categories>
+                </div>
+
+                <div class="col-7">
+                    @RenderBody()
+                </div>
+        </div>
         </div>
 
     </div>
 
-    <footer class="modal-footer">Aubree and Tyler &copy ATBooks</footer>
+    <footer class="modal-footer site-footer">Aubree and Tyler &copy ATBooks</footer>
     <br /><br />
 </body>
 </html>

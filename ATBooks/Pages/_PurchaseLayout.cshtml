@@ -9,21 +9,44 @@
     <link href="~/lib/css/main.css" rel="stylesheet" />
     <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
-<body class="container col-8">
+<body class="">
 
-    <div class="">
-        <br /><h1 class="text-center border-bottom">Welcome to A&T's Bookstore</h1><br />
-    </div>
-
-    <div class="row m-1 p-1">
-
-        <div class="">
-            @RenderBody()
+    <div class="cart-bar p-2 mt-0 main-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                </div>
+                <div class="col-6">
+                    <h2 class="text-center text-white mb-0">A&T's Bookstore</h2>
+                </div>
+                <div class="col-3">
+                </div>
+            </div>
         </div>
-
     </div>
 
-    <footer class="modal-footer">Aubree and Tyler &copy ATBooks</footer>
+    @*<div class="">
+        <br /><h1 class="text-center border-bottom">Welcome to A&T's Bookstore</h1><br />
+    </div>*@
+
+    <div class="pt-3">
+        <br /><br /><br />
+        <div class="row m-1 p-1">
+
+            <div class="col-3">
+
+            </div>
+            <div class="col-6">
+                @RenderBody()
+            </div>
+            <div class="col-3">
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="modal-footer site-footer">Aubree and Tyler &copy ATBooks</footer>
     <br /><br />
 </body>
 </html>
