@@ -9,7 +9,7 @@
     }
 </style>
 
-<h3 class="bg-@ThemeColor text-white text-center p-1">Edit "@b.Title"</h3>
+<h3 class="bg-admin2 text-white text-center p-1">@TitleText "@b.Title"</h3>
 
 <EditForm Model="b" OnValidSubmit="SaveBook">
 
@@ -63,8 +63,8 @@
     </div>
 
     <br />
-    <button type="submit" class="btn btn-@ThemeColor">Save</button>
-    <NavLink class="btn btn-outline-danger" href="/admin/books">Cancel</NavLink>
+    <button type="submit" class="btn btn-primary-admin-edit">Save</button>
+    <NavLink class="btn btn-primary-admin-delete" href="/admin/books">Cancel</NavLink><br /><br />
     
 </EditForm>
 
@@ -73,7 +73,7 @@
     [Parameter]
     public long Id { get; set; } = 0;
 
-    public string ThemeColor => Id == 0 ? "primary" : "admin2";
+    //public string ThemeColor => Id == 0 ? "primary" : "admin2";
     public string TitleText => Id == 0 ? "Create" : "Edit";
 
     public Books b { get; set; } = new Books();

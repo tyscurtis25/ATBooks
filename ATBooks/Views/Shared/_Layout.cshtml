@@ -20,43 +20,50 @@
 </head>
 <body class="">
 
-    <div class="cart-bar p-2 mt-0 main-nav">
+    <div class="cart-bar pt-2 pb-0 main-nav">
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 pt-1">
                     <a class="btn btn-sm btn-outline-primary-cart float-end" href="/admin">Log in</a>
                 </div>
-                <div class="col-6">
-                    <h2 class="text-center text-white mb-0">A&T's Bookstore</h2>
+                <div class="col-4">
+                    <h2 class="text-white mb-0 float-end">A&T's Bookstore</h2>
                 </div>
-                <div class="col-3 text-right">
+                <div class="col-2">
+                    <svg class="pt-1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" 
+                        xml:space="preserve" width="35px" height="35px" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier"> <rect y="13.816" style="fill:#BFD7D7;" width="128.16" 
+                        height="493.696"/> <rect y="142.008" style="fill:#1A1718;" 
+                        width="128.16" height="32"/> <rect x="172.224" y="13.816" 
+                        style="fill:#71ADB7;" width="128.16" height="493.696"/> 
+                        <rect x="172.24" y="142.008" style="fill:#1A1718;" width="128.16" height="32"/> 
+                        <polygon style="fill:#D62225;" points="512,496.232 384.32,507.496 340.16,15.752 467.856,4.488 "/> 
+                        <rect x="400.947" y="89.706" transform="matrix(-0.0879 -0.9961 0.9961 -0.0879 300.4084 582.6343)" 
+                        style="fill:#1A1718;" width="31.999" height="128.156"/> </g>
+                    </svg>
+                </div>
+                <div class="col-3 pt-1 text-right">
                     <vc:cart-summary />
                 </div>
             </div>
         </div>
-    </div>
-    <div class="m-1 p-1 pt-3 container justify-content-end">
-        <br /><br /><br />
-        <div class="col-9">
+        <div class="row text-center bg-categories pt-2">
+            <vc:categories></vc:categories>
+        </div>
+    </div><br />
+
+    <div class="container pt-4 mt-5 justify-content-between">
+        <br />
+        <div class="container col-12 text-center">
             <div class="row">
-
-                <div class="col-3">
-
-                </div>
-
-                <div id="categories" class="col-2">
-                    <vc:categories></vc:categories>
-                </div>
-
-                <div class="col-7">
-                    @RenderBody()
-                </div>
+                @RenderBody()
+            </div>
         </div>
-        </div>
-
     </div>
 
     <footer class="modal-footer site-footer">Aubree and Tyler &copy ATBooks</footer>
-    <br /><br />
 </body>
 </html>

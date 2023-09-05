@@ -4,11 +4,14 @@
 
 <table class="table table-sm table-hover table-bordered">
 
-    <thead>
+    <thead class="admin-table-header">
         <tr>
             <th>Book ID</th>
             <th>Book Title</th>
             <th>Book Author</th>
+            <th></th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
 
@@ -25,13 +28,13 @@
             <td>@b.Author</td>
 
             <td>
-                <NavLink class="btn btn-outline-primary btn-sm" href="@GetDetailsUrl(b.BookId)">Details</NavLink>
+                <NavLink class="btn btn-primary-admin-details btn-sm" href="@GetDetailsUrl(b.BookId)">Details</NavLink>
             </td>
             <td>
-                <NavLink class="btn btn-outline-success btn-sm" href="@GetEditUrl(b.BookId)">Edit</NavLink>
+                <NavLink class="btn btn-primary-admin-edit btn-sm" href="@GetEditUrl(b.BookId)">Edit</NavLink>
             </td>
             <td>
-                <button class="btn btn-outline-danger btn-sm" @onclick="@(x => RemoveBook(b))">Delete</button>
+                <button class="btn btn-primary-admin-delete btn-sm" @onclick="@(x => RemoveBook(b))">Delete</button>
             </td>
         </tr>
             }
@@ -47,7 +50,7 @@
 
 </table>
 
-<NavLink class="btn btn-outline-primary" href="/admin/books/create">Create</NavLink>
+<NavLink class="btn admin-control-btn" href="/admin/books/create">Create</NavLink><br /><br />
 
 @code {
 

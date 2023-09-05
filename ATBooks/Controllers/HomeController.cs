@@ -19,7 +19,7 @@ namespace ATBooks.Controllers
 
         public IActionResult Index(string bookCategory, int pageNum = 1)
         {
-            int pageSize = 5;
+            int pageSize = 3;
 
             var x = new BooksViewModel
             {

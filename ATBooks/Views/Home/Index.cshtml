@@ -4,14 +4,19 @@
 
 @model BooksViewModel
 
-@foreach (Books b in Model.Books)
+<div class="row">
+    @foreach (Books b in Model.Books)
 {
-    <partial name="BookstoreSummary" model="b"/>
+    <div class="col-4">
+        <partial name="BookstoreSummary" model="b"/>
+    </div>
 }
+</div>
 
-<div class="custom-nav">
-        <div page-list="@Model.PageInfo" page-action="Index" page-class="page-link"
-             page-class-normal="page-link" page-class-selected="page-link fw-bolder text-decoration-underline" page-classes-enabled="true"
-             class="pagination col-6">
-        </div>
+
+<div class="custom-nav pt-2">
+    <div page-list="@Model.PageInfo" page-action="Index" page-class="page-link"
+            page-class-normal="page-link" page-class-selected="page-link page-link-selected fw-bolder" page-classes-enabled="true"
+            class="pagination col-6">
+    </div>
 </div>

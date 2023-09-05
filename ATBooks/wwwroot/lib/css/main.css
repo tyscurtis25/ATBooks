@@ -1,10 +1,17 @@
 ﻿:root {
-    --one: #2E446E;
+    --one: #D62225;
+    --two: #71ADB7;
+    --three: #D2D5CE;
+    --four: #241E22;
+    --five: #BFD7D7;
+    --six: #FFFFFF;
+    --seven: #F2F2F2;
+    /*--one: #2E446E;
     --two: #ADC4F0;
     --three: #6495ED;
     --four: #4F5A6E;
     --five: #4E74BA;
-    --six: #FFFFFF;
+    --six: #FFFFFF;*/
 }
 
 /* Fonts:
@@ -15,12 +22,14 @@ font-family: 'Source Sans Pro', sans-serif; --Body
 body {
     color: var(--four);
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #f2f2f2;
+    background-color: var(--seven)!important;
+    height: 100%;
+    width: 100%;
 }
 
 
 h1, h2, h4, h5, h6 {
-    color: var(--three);
+    color: var(--six);
     font-family: 'Playfair Display', serif;
 }
 
@@ -29,12 +38,21 @@ h3 {
     color: var(--six);
 }
 
+.purchase-header {
+    color: var(--two)!important;
+}
+
 li {
     list-style: none;
 }
 
+.separator {
+    color: var(--two);
+}
+
 footer {
     color: var(--three);
+    border-radius: 0px;
 }
 
 .site-footer {
@@ -42,7 +60,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--five);
+    background-color: var(--four)!important;
     color: var(--six);
     text-align: center;
     height: 50px;
@@ -54,13 +72,15 @@ footer {
 }
 
 .card-header {
-    background-color: var(--three);
+    background-color: var(--two);
     color: var(--six);
+    text-align: center;
 }
 
 .card {
-    border-color: var(--three);
-    border-width: 0.5px;
+    /*border-color: var(--two);
+    border-width: 0.5px;*/
+    box-shadow: 1px, 1px, 2px rgba(0, 0, 0, 0.5);
 }
 
 .card-body {
@@ -69,6 +89,7 @@ footer {
     border-width: 0.5px;
     box-shadow: 1px, 1px, 2px;
     background-color: var(--six);
+    text-align: left;
 }
 
 .custom-page-header {
@@ -79,9 +100,18 @@ footer {
     color: var(--six);
 }
 
-.custom-nav .nav-link {
-    color: var(--three);
-    font-size: 20px;
+.custom-nav .page-link {
+    color: var(--two) !important;
+    font-size: 16px;
+    border-radius: 3px;
+    /*border: 1px solid var(--two) !important;*/
+}
+
+.custom-nav .page-link-selected {
+    color: var(--six) !important;
+    font-size: 16px;
+    background-color: var(--two) !important;
+    border-radius: 3px;
 }
 
 .main-nav {
@@ -89,52 +119,65 @@ footer {
     left: 0;
     top: 0;
     width: 100%;
-    /*background-color: var(--five);
-    color: var(--six);*/
-    box-shadow: 0px .5px 2px rgb(54,69,79,0.3);
+    background-color: var(--four)!important;
+    color: var(--six);
+    /*box-shadow: 0px .5px 1px rgb(0,0,0,0.1);*/
     z-index: 2;
+}
+
+.bg-category-nav {
+    background-color: var(--five);
+}
+
+.bg-categories {
+    border-bottom: 1px solid var(--five);
+    box-shadow: 0px .5px 1px rgb(0,0,0,0.1);
 }
 
 .left {
     float: left;
 }
 
-.btn-primary, .btn-primary:active {
+.btn-primary {
     color: var(--six) !important;
-    background-color: var(--three) !important;
+    background-color: var(--two) !important;
+    border: none;
+    border-radius: 0px;
 }
 
 .bg-primary {
-    color: var(--three);
-    background-color: var(--three);
+    color: var(--four);
+    background-color: var(--four);
 }
 
 .btn-outline-primary, .btn-outline-primary:visited {
-    border-color: var(--three) !important;
-    color: var(--three) !important;
+    border: none;
+    color: var(--four) !important;
+    border-radius: 0px;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:active {
-    background-color: var(--three) !important;
-    color: var(--six) !important;
-}
+    .btn-outline-primary:hover, .btn-outline-primary:active {
+        border: none;
+        background-color: var(--two) !important;
+        color: var(--six)!important;
+        border-radius: 0px;
+    }
 
 .btn-outline-primary-cart, .btn-outline-primary-cart:visited {
     border-color: var(--six) !important;
-
     color: var(--six) !important;
 }
 
 .btn-outline-primary-cart:hover, .btn-outline-primary-cart:active {
-    background-color: var(--three) !important;
+    background-color: var(--two) !important;
     color: var(--six) !important;
     border-color: var(--five) !important;
 }
 
 .btn-outline-success, .btn-outline-success:hover,
-.btn-outline-success:active, .btn-outline-success:visited, .btn-sm {
-    border-color: var(--three) !important;
-    color: var(--three) !important;
+.btn-outline-success:active, .btn-outline-success:visited {
+    border-color: var(--two) !important;
+    color: var(--two) !important;
 }
 
 .btn-outline-success:hover {
@@ -163,33 +206,145 @@ footer {
     background-color: var(--six);
 }
 
+.btn-primary-cart {
+    color: var(--six) !important;
+    background-color: var(--four) !important;
+    border-color: var(--four)!important;
+    border-radius: 3px;
+}
+
+.btn-primary-cart:hover {
+    color: var(--six) !important;
+    background-color: var(--two) !important;
+    border-color: var(--two) !important;
+    border-radius: 3px;
+}
+
+/* admin btns */
+
+.btn-primary-admin-details {
+    background-color: transparent;
+    border-color: var(--four) !important;
+    color: var(--four) !important;
+    border-radius: 3px;
+}
+
+    .btn-primary-admin-details:hover {
+        color: var(--six) !important;
+        background-color: var(--four) !important;
+        border-color: var(--four) !important;
+        border-radius: 3px;
+    }
+
+.btn-primary-admin-edit {
+    background-color: transparent;
+    border-color: var(--two) !important;
+    color: var(--two) !important;
+    border-radius: 3px;
+}
+
+    .btn-primary-admin-edit:hover {
+        color: var(--six) !important;
+        background-color: var(--two) !important;
+        border-color: var(--two) !important;
+        border-radius: 3px;
+    }
+
+.btn-primary-admin-delete {
+    background-color: transparent;
+    border-color: var(--one) !important;
+    color: var(--one) !important;
+    border-radius: 3px;
+}
+
+    .btn-primary-admin-delete:hover {
+        color: var(--six) !important;
+        background-color: var(--one) !important;
+        border-color: var(--one) !important;
+        border-radius: 3px;
+    }
+
+.table-bordered {
+    border-color: var(--two)!important;
+}
+
+.admin-table-header {
+    background-color: var(--five)!important;
+}
+
+.checkout-form {
+    text-align: left;
+}
+
 .bg-gray {
     background-color: #f2f2f2;
 }
 
 .bg-admin {
-    background-color: var(--five);
+    background-color: var(--four)!important;
+    color: var(--six)!important;
+}
+
+.admin-container {
+    border-radius: 5px;
 }
 
 .bg-admin2 {
-    background-color: var(--three);
+    background-color: var(--two) !important;
+    color: var(--six) !important;
+}
+
+.bg-admin2 .navbar-brand {
+    font-weight: 500;
+    color: var(--six)!important;
+    padding-left: 10px;
+    padding-top: 5px;
 }
 
 .btn-admin2 {
-    border-color: var(--three) !important;
-    color: var(--three) !important;
+    border-color: var(--two) !important;
+    background-color: var(--two) !important;
+    color: var(--six) !important;
+    border-radius: 3px;
 }
 
 .btn-admin2:hover {
-    background-color: var(--three) !important;
+    background-color: var(--four) !important;
     color: var(--six) !important;
-    border-color: var(--five) !important;
+    border-color: var(--two) !important;
+    border-radius: 3px;
 }
 
-th, td {
-    color: var(--four);
+td {
+    color: var(--four)!important;
+}
+
+th {
+    color: var(--four)!important;
+    font-weight: 400;
 }
 
 .login-bg {
-    background-color: #f2f2f2;
+    background-color: var(--five)!important;
+}
+
+.admin-control-btn, .admin-control-btn:visited {
+    border-color: var(--four) !important;
+    background-color: var(--four) !important;
+    color: var(--six) !important;
+    border-radius: 3px;
+}
+
+    .admin-control-btn:hover {
+        border-color: var(--two) !important;
+        background-color: var(--two) !important;
+        color: var(--six) !important;
+        border-radius: 3px;
+    }
+
+.admin-control-btn-active {
+    border-color: var(--two) !important;
+    background-color: var(--two) !important;
+    color: var(--six) !important;
+    border-radius: 3px;
 }

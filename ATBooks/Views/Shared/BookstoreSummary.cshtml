@@ -3,36 +3,40 @@
 
 @model Books
 
-<div class="card">
+<div class="">
+    <div class="card">
 
-    <div class="card-header container">
+        <div class="card-header">
 
-        <div class="row">
-            <h3 class="col-9">@Model.Title</h3>
-            <span class="col-3 fw-bold pt-2">Price: $@Model.Price</span>
+            <div class="row">
+                <h5 class="col">@Model.Title</h5>
+            </div>
         </div>
+
+        <ul class="card-body p-4">
+            <li><strong>Author: </strong>@Model.Author</li>
+            <li><strong>Publisher: </strong>@Model.Publisher</li>
+            <li><strong>Isbn: </strong>@Model.Isbn</li>
+            <li><strong>Classification: </strong>@Model.Classification</li>
+            <li><strong>Category: </strong>@Model.Category</li>
+            <li><strong>PageCount: </strong>@Model.PageCount</li>
+        </ul>
+
+        <div class="container p-2">
+            <div class="row">
+                <span class="col-5 fw-bold pt-1">Price: $@Model.Price</span>
+                <form method="post" asp-page="/Purchase" class="col-7">
+
+                    <input type="hidden" asp-for="@Model.BookId" />
+                    <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+
+                    <span class="card-text">
+                        <button type="submit" class="btn btn-outline-success btn-sm float-end">Purchase</button>
+                    </span>
+
+                </form>
+            </div>
+        </div>
+
     </div>
-
-    <ul class="card-body ps-4">
-        <li><strong>Author: </strong>@Model.Author</li>
-        <li><strong>Publisher: </strong>@Model.Publisher</li>
-        <li><strong>Isbn: </strong>@Model.Isbn</li>
-        <li><strong>Classification: </strong>@Model.Classification</li>
-        <li><strong>Category: </strong>@Model.Category</li>
-        <li><strong>PageCount: </strong>@Model.PageCount</li>
-    </ul>
-
-    <form method="post" asp-page="/Purchase" class="p-2">
-
-        <input type="hidden" asp-for="@Model.BookId" />
-        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
-
-        <span class="card-text">
-            <button type="submit" class="btn btn-outline-success btn-sm float-end">Purchase</button>
-        </span>
-
-    </form>
-
 </div>
-
-<br />
